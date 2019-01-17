@@ -8,6 +8,7 @@
       #everything{
         opacity: 1;
         animation: ic 4s ease 0s 1 none;
+          /* the animation name is ic. It happens for only 4s once. And it starts out slow and goes fast. */
       }
       #square{
           width: 200px;
@@ -15,9 +16,10 @@
           border: 20px solid rgb(255, 204, 255);
           margin: 300px;
           animation: square 2s ease 0s 1 none;
+          /* the animation name is square. It happens for only 2s once. And it starts out slow and goes fast. */
       }
       
-      @keyframes square{
+      @keyframes square{ 
           from{
             transform: rotate(0deg);
           }
@@ -25,12 +27,13 @@
             transform: rotate(360deg);
           }
       }
+      /*the square will rotate 360 once*/
       
       #ellipse{
         width: 0px;
         height: 0px;
         transition: width 2s, height 2s;
-        border: 10px solid #9999ff;
+        border: 10px solid #9999ff; /* a border with the size of 10 solid and a color of shade of purple */ 
         border-radius: 50%;
         transform: translate(310px, -530px); /*move the circle to the middle of the square*/
         background-image: radial-gradient(pink, hotpink);
@@ -39,7 +42,7 @@
       #ellipse:hover {
         width: 200px;
         height: 200px;
-      }
+      }   /* the result of the transition*/
       
       
       p{
@@ -47,20 +50,20 @@
         text-shadow: 5px 5px 10px grey;
         color: black;
         font-size: 50px;
-        transform: translate(395px, -715px);
+        transform: translate(395px, -715px); /* translate above the text about the square */
       }
       
-      @keyframes ic{
+      @keyframes ic{ 
         0%{
           opacity: 0;
         }
         50%{
-          opacity: 0.3;
+          opacity: 0.5;
         }
         100%{
           opacity: 1;
         }
-      }
+      }   /* the animation name is square. As the 4s passes, the objects all appears*/
     
       
   </style>
